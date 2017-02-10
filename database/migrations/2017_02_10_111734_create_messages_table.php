@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCaesarsCypherTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCaesarsCypherTable extends Migration
      */
     public function up()
     {
-      Schema::create('caesars_cypher', function(Blueprint $table){
+      Schema::create('messages', function(Blueprint $table){
         $table->increments('id');
         $table->string('content');
         $table->integer('offset');
@@ -27,6 +27,6 @@ class CreateCaesarsCypherTable extends Migration
      */
     public function down()
     {
-      Schema::drop('caesars_cypher');
+        Schema::drop('messages');
     }
 }

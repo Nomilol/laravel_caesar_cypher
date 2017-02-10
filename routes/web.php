@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/views', function(){
-  return view('index');
-});
+Route::get('/views', 'MessageController@getMessage');

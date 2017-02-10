@@ -6,7 +6,8 @@
     <title>Message</title>
   </head>
   <body>
-    <form class="ui small form" action="/addMessageToDataBase" method="post">
+    <!-- <form class="ui small form" action="/addToDataBase" method="post">
+      {{ csrf_field() }}
       <div class="contentField">
         <label for="content">Contenu du message</label>
         <input type="text" name="content">
@@ -15,7 +16,10 @@
         <label for="offset">Décalage</label>
         <input type="text" name="offset">
       </div>
-      <button class="ui purple button" type="button" name="button">Envoyer</button>
-    </form>
+      <button class="ui purple button" type="submit" name="button">Envoyer</button>
+    </form> -->
+    @foreach ($messages as $message)
+       {{$message->content}}
+    @endforeach
   </body>
 </html>
