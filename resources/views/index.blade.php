@@ -6,7 +6,7 @@
     <title>Message</title>
   </head>
   <body>
-    <!-- <form class="ui small form" action="/addToDataBase" method="post">
+    <form class="ui small form" action="/saveMessageToDB" method="post">
       {{ csrf_field() }}
       <div class="contentField">
         <label for="content">Contenu du message</label>
@@ -17,7 +17,7 @@
         <input type="text" name="offset">
       </div>
       <button class="ui purple button" type="submit" name="button">Envoyer</button>
-    </form> -->
+    </form>
     @foreach ($messages as $message)
        {{$message->content}}
     @endforeach

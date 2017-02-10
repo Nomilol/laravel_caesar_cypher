@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/views', 'MessageController@getMessage');
+Route::post('saveMessageToDB', 'MessageController@saveMessageToDB');

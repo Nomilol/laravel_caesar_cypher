@@ -11,4 +11,11 @@ class MessageController extends Controller
     $messages = Message::all();
     return view('index', ['messages' => $messages]);
   }
+  public function saveMessageToDB(Request $request) {
+    $createdMessage = new Message;
+    $createdMessage->content = $request->content;
+    $createdMessage->offset = $request->offset;
+    $createdMessage->save();
+    return redirect('/views');
+  }
 }
